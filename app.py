@@ -494,6 +494,7 @@ selected = option_menu(
     menu_title=None,
     options=["Analyses", "Gestion", "Import", "Groupes"],
     icons=["bar-chart-line-fill", "table", "file-earmark-spreadsheet-fill", "person-fill-gear"], 
+    default_index=0, # 0 correspond à "Analyses"
     orientation="horizontal",
     styles={
         "container": {
@@ -1159,7 +1160,7 @@ elif selected == "Gestion":
   
 
 
-elif selected == "Import":
+elif selected == "Gestion":
     # --- TAB GESTION (VERSION CORRIGÉE) ---
         if not df_h.empty:
             # 1. INITIALISATION DES ÉTATS
@@ -1358,7 +1359,7 @@ elif selected == "Import":
                     time.sleep(1)
                     st.rerun()
                                     
-elif selected == "Groupes":                        
+elif selected == "Import":                        
     # --- TAB IMPORT (VERSION CORRIGÉE ET SÉCURISÉE) ---
         st.markdown("""
             <div style="background-color: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 15px; border: 1px solid rgba(128, 128, 128, 0.1); margin-bottom: 25px;">
