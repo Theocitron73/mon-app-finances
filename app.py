@@ -493,7 +493,8 @@ with st.sidebar:
 selected = option_menu(
     menu_title=None,
     options=["Analyses", "Gestion", "Import", "Groupes"],
-    icons=["bar-chart-line-fill", "table", "file-earmark-spreadsheet-fill", "person-fill-gear"], 
+    icons=["bar-chart-line-fill", "table", "file-earmark-spreadsheet-fill", "person-fill-gear"],
+    default_index=0,
     orientation="horizontal",
     styles={
         "container": {
@@ -1517,3 +1518,4 @@ elif selected == "Groupes":
 
                     except Exception as e:
                         st.error(f"❌ Erreur critique : {e}")
+
