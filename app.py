@@ -1093,7 +1093,7 @@ if selected == "Analyses":
                                         
     
             
-elif selected == "Gestion":
+elif selected == "Groupes":
         st.markdown("""
             <div style="background-color: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 15px; border: 1px solid rgba(128, 128, 128, 0.1); margin-bottom: 20px;">
                 <h2 style="margin: 0; font-size: 24px;">👥 Structure & Comptes</h2>
