@@ -14,6 +14,57 @@ st.set_page_config(page_title="Mes Budgets", layout="wide",initial_sidebar_state
 
 st.markdown("""
 <style>
+    /* 1. ADAPTATION GLOBALE MOBILE */
+    @media (max-width: 768px) {
+        /* On réduit les marges énormes du container Streamlit */
+        [data-testid="stAppViewBlockContainer"] {
+            padding: 1rem 0.5rem !important;
+        }
+
+        /* On force les colonnes à s'empiler verticalement */
+        [data-testid="column"] {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+            margin-bottom: 10px;
+        }
+
+        /* On réduit la taille des titres pour mobile */
+        h1 { font-size: 1.5rem !important; }
+        h2 { font-size: 1.2rem !important; }
+        h3 { font-size: 1.1rem !important; }
+
+        /* Ajustement des métriques (tes KPI en haut) */
+        [data-testid="stMetricValue"] {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    /* 2. OPTIMISATION DU MENU (streamlit-option-menu) */
+    /* Pour éviter que le menu horizontal ne déborde */
+    .nav-link {
+        padding: 5px !important;
+        font-size: 12px !important;
+        white-space: nowrap;
+    }
+
+    /* 3. TES COMPOSANTS PERSONNALISÉS (Lignes 1125+) */
+    /* On remplace les largeurs fixes par du 100% */
+    .votre-classe-conteneur-groupe {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto; /* Permet de scroller le tableau si trop large */
+    }
+
+    /* Correction pour ton gradient de fond pour qu'il couvre tout */
+    .stApp {
+        background-attachment: fixed;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+
+st.markdown("""
+<style>
     /* 1. Supprimer l'espace vide tout en haut de la page */
     .block-container {
         padding-top: 0rem !important;
